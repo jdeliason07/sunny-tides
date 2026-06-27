@@ -84,8 +84,8 @@ export default function Home() {
             Shop all <ArrowRight size={14} />
           </Link>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-4">
-          {featured.map((p) => (
+        <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10">
+          {featured.slice(0, 2).map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}
         </div>

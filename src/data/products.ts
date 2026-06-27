@@ -154,6 +154,44 @@ export const PRODUCTS: Product[] = [
     hue: '#89C4E1',
     featured: true,
   },
+  {
+    slug: 'necklace-capri',
+    name: 'Capri Necklace',
+    category: 'jewelry',
+    priceCents: 2800,
+    images: ['/images/products/necklace-capri.jpg'],
+    blurb: 'Purple, white, and clear beads — the pool-day one.',
+    description:
+      'Hand-strung in a loose mix of purple, white, and clear glass beads. Light enough to layer, long enough to trail. Each strand comes out a little different.',
+    details: [
+      'Glass and seed beads',
+      'Waxed cord',
+      'Water-safe — wear it in',
+      'Strung by hand in small batches',
+    ],
+    badge: 'Capri',
+    hue: '#B05CB0',
+    featured: true,
+  },
+  {
+    slug: 'necklace-santorini',
+    name: 'Santorini Necklace',
+    category: 'jewelry',
+    priceCents: 2800,
+    images: ['/images/products/necklace-santorini.jpg'],
+    blurb: 'Teal, blue, and green — ocean all the way down.',
+    description:
+      'A multi-color mix of teal, cobalt, green, and clear glass beads hand-strung on waxed cord. Built to move in the water. Named after the bluest place we know.',
+    details: [
+      'Glass and seed beads',
+      'Waxed cord',
+      'Water-safe — wear it in',
+      'Strung by hand in small batches',
+    ],
+    badge: 'Santorini',
+    hue: '#4A9E8E',
+    featured: true,
+  },
 ];
 
 export function getProduct(slug: string): Product | null {
