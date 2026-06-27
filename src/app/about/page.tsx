@@ -94,15 +94,17 @@ export default function AboutPage() {
       </section>
 
       {/* Lifestyle image */}
-      <section className="mx-auto max-w-7xl px-4 pb-20 pt-16 sm:px-6">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-card ring-1 ring-line">
-          <Image
-            src="/images/lifestyle/paint-party.jpg"
-            alt="Sunny Tides lifestyle"
-            fill
-            sizes="(max-width: 1280px) 100vw, 1280px"
-            className="object-cover"
-          />
+      <section className="bg-sun px-4 pb-20 pt-16 sm:px-6">
+        <div className="mx-auto max-w-7xl">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-card ring-1 ring-line">
+            <Image
+              src="/images/lifestyle/paint-party.jpg"
+              alt="Sunny Tides lifestyle"
+              fill
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
     </>
