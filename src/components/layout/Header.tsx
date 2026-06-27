@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ShoppingBag, Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { SunStamp } from '@/components/brand/SunStamp';
 import { useCart } from '@/components/cart/CartProvider';
 import { BRAND_NAME } from '@/config/site';
 
@@ -26,7 +26,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 text-ink hover:text-deep-tide">
-          <SunStamp className="h-8 w-8" />
+          <Image src="/images/logo.png" alt="Sunny Tides logo" width={32} height={37} className="h-8 w-auto" />
           <span className="font-display text-xl font-semibold leading-none">{BRAND_NAME}</span>
         </Link>
 

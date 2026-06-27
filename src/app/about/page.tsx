@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
-import { SunStamp } from '@/components/brand/SunStamp';
-import { Smiley } from '@/components/brand/Smiley';
-import { OWNER_NAME, FOUNDED_PLACE, BRAND_NAME } from '@/config/site';
+import { OWNER_NAME, BRAND_NAME } from '@/config/site';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -16,15 +13,15 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-seaglass">
         <div className="mx-auto max-w-3xl px-4 py-20 text-center sm:px-6">
-          <SunStamp className="mx-auto h-16 w-16 text-ink" />
-          <p className="section-label mt-6">Our story</p>
-          <h1 className="mt-3 text-4xl text-ink sm:text-5xl">
-            Warm light on cold water.
-          </h1>
-          <p className="mt-5 text-lead text-ash">
-            Sunny Tides is the feeling of sun on your shoulders after a cold morning swim.
-            We make beach-day goods by hand — one bag, one strand, one stamp at a time.
-          </p>
+          <Image
+            src="/images/logo.png"
+            alt="Sunny Tides logo"
+            width={110}
+            height={126}
+            className="mx-auto"
+          />
+          <p className="section-label mt-8">The Sunny Tides Story</p>
+          <h1 className="mt-3 text-6xl text-ink sm:text-7xl lg:text-8xl">About</h1>
         </div>
       </section>
 
@@ -67,8 +64,19 @@ export default function AboutPage() {
       {/* The process */}
       <section className="bg-ink text-paper">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sun">How it&apos;s made</p>
-          <h2 className="mt-3 text-3xl text-paper sm:text-4xl">Slow, sunny, by hand</h2>
+          <div className="flex items-start justify-between gap-10">
+            <div>
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sun">How it&apos;s made</p>
+              <h2 className="mt-3 text-3xl text-paper sm:text-4xl">Slow, sunny, by hand</h2>
+            </div>
+            <Image
+              src="/images/logo.png"
+              alt="Sunny Tides logo"
+              width={64}
+              height={73}
+              className="hidden shrink-0 opacity-80 grayscale invert sm:block"
+            />
+          </div>
           <div className="mt-12 grid gap-10 md:grid-cols-3">
             {[
               ['01', 'Dyed', 'One hue per bag, bled into white. Mixed in small batches so the color lands a little differently every time.'],
@@ -85,28 +93,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Paint party */}
-      <section className="bg-canvas/50">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-2">
-          <div>
-            <Smiley className="h-12 w-12 text-ink" />
-            <h2 className="mt-4 text-3xl text-ink sm:text-4xl">The smiley side</h2>
-            <p className="mt-4 max-w-md text-lead text-ash">
-              The hand-drawn smiley is how Sunny Tides doodles in the margins. It started at
-              paint parties — friends, music, canvas on the grass — and it stuck. Loose, off-center,
-              never a perfect circle.
-            </p>
-            <Link href="/shop/totes" className="btn-primary mt-7">Shop the totes</Link>
-          </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-card ring-1 ring-line">
-            <Image
-              src="/images/lifestyle/paint-party.jpg"
-              alt="Paint-party flat lay with paints and a butter-canvas Sunnytote"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
+      {/* Lifestyle image */}
+      <section className="mx-auto max-w-7xl px-4 pb-20 pt-16 sm:px-6">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-card ring-1 ring-line">
+          <Image
+            src="/images/lifestyle/paint-party.jpg"
+            alt="Sunny Tides lifestyle"
+            fill
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            className="object-cover"
+          />
         </div>
       </section>
     </>
