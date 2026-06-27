@@ -3,21 +3,20 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { ProductCard } from '@/components/product/ProductCard';
 import { SunStamp } from '@/components/brand/SunStamp';
-import { Smiley } from '@/components/brand/Smiley';
-import { featuredProducts, productsByCategory, formatPrice } from '@/data/products';
+import { featuredProducts, formatPrice } from '@/data/products';
 import { BRAND_ESSENCE, OWNER_NAME, FOUNDED_PLACE } from '@/config/site';
 
 const SPECTRUM = [
-  { slug: 'wave-blue-tote', hue: '#6FAED9', name: 'Wave Blue', img: '/images/products/tote-wave.svg' },
-  { slug: 'sea-lime-tote', hue: '#7FC44E', name: 'Sea Lime', img: '/images/products/tote-lime.svg' },
-  { slug: 'sunset-orange-tote', hue: '#E98A33', name: 'Sunset Orange', img: '/images/products/tote-sunset.svg' },
-  { slug: 'shell-pink-tote', hue: '#EF87A2', name: 'Shell Pink', img: '/images/products/tote-shell.svg' },
-  { slug: 'orchid-tote', hue: '#B05CB0', name: 'Orchid', img: '/images/products/tote-orchid.svg' },
+  { slug: 'tote-baby-blue', hue: '#89C4E1', name: 'Baby Blue', img: '/images/products/tote-baby-blue.jpg' },
+  { slug: 'tote-blue-pink', hue: '#A8CDED', name: 'Blue & Pink', img: '/images/products/tote-blue-pink.jpg' },
+  { slug: 'tote-forest-green', hue: '#4A7C59', name: 'Forest Green', img: '/images/products/tote-forest-green.jpg' },
+  { slug: 'tote-dark-blue', hue: '#2B5EA7', name: 'Dark Blue', img: '/images/products/tote-dark-blue.jpg' },
+  { slug: 'tote-purple-pink', hue: '#C56BB3', name: 'Purple & Pink', img: '/images/products/tote-purple-pink.jpg' },
+  { slug: 'tote-magenta', hue: '#E0457B', name: 'Magenta', img: '/images/products/tote-magenta.jpg' },
 ];
 
 export default function Home() {
   const featured = featuredProducts();
-  const totes = productsByCategory('totes');
 
   return (
     <>
@@ -65,7 +64,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {SPECTRUM.map((t) => (
             <Link key={t.slug} href={`/product/${t.slug}`} className="group text-center">
               <div
@@ -140,27 +139,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- PAINT-PARTY / SMILEY ---------- */}
+      {/* ---------- JEWELRY SPOTLIGHT ---------- */}
       <section className="bg-canvas/50">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-2">
           <div className="relative order-2 aspect-[4/5] overflow-hidden rounded-card ring-1 ring-line md:order-1">
             <Image
-              src="/images/lifestyle/paint-party.jpg"
-              alt="Paint-party flat lay with a butter-canvas Sunnytote"
+              src="/images/products/necklace-blue-pink.jpg"
+              alt="Blue and pink beaded necklace held over a pool"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
           <div className="order-1 md:order-2">
-            <Smiley className="h-12 w-12 text-ink" />
-            <h2 className="mt-4 text-3xl text-ink sm:text-4xl">The paint-party drop</h2>
+            <p className="section-label">Hand-strung jewelry</p>
+            <h2 className="mt-4 text-3xl text-ink sm:text-4xl">Made for the water</h2>
             <p className="mt-4 max-w-md text-lead text-ash">
-              Butter canvas, smiles drawn on loose by hand. Born from the messy, sunny side of
-              Sunny Tides. Drawn one at a time — never a perfect circle.
+              Glass and seed beads, strung one at a time on waxed cord. Water-safe so you never
+              have to take it off. Each strand is a little different — that's the point.
             </p>
-            <Link href="/product/sunnytote-smiley" className="btn-primary mt-7">
-              Shop the Sunnytote — {formatPrice(totes.find((t) => t.slug === 'sunnytote-smiley')!.priceCents)}
+            <Link href="/product/necklace-blue-pink" className="btn-primary mt-7">
+              Shop jewelry — {formatPrice(2800)}
             </Link>
           </div>
         </div>
