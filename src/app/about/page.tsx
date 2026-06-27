@@ -45,17 +45,19 @@ export default function AboutPage() {
             <h2 className="mt-3 text-3xl text-ink sm:text-4xl">Hi, I&apos;m {OWNER_NAME}.</h2>
             <div className="mt-5 space-y-4 text-lead leading-relaxed text-ash">
               <p>
-                Sunny Tides started in {FOUNDED_PLACE} with a pot of dye and a stack of blank
-                canvas. I wanted a bag that looked like the water I grew up near — never quite
-                the same color twice.
+                During Covid I needed a beach bag, so I decided to just make my own. I tie-dyed
+                it using bleach — it came out looking really cool — and when I wore it out in
+                public people kept asking where I got it. So I started selling them.
               </p>
               <p>
-                So I dye them by hand, in small batches. Every tote gets pulled from the dye,
-                bled into white, dried in the sun, and stamped one at a time. The beaded pieces
-                are strung the same way — slow, by hand, by me.
+                I started selling them in surf shops and the response was way more than I
+                expected. Then I started thinking about sustainability — rather than just making
+                reusable bags, I wanted to take it further.
               </p>
               <p>
-                No two come out exactly alike. That&apos;s not a flaw. That&apos;s the whole idea.
+                So I started thrifting materials and making jewelry too — turning old, discarded
+                things into wearable art. That&apos;s what Sunny Tides is now: upcycled and
+                ocean-inspired, made by hand.
               </p>
             </div>
           </div>

@@ -9,7 +9,7 @@ export const FOUNDED_PLACE = 'the Pacific Northwest';
 export const BRAND_ESSENCE =
   'Hand-dyed totes and beaded jewelry made in small batches. Each one pulled from the dye, stamped by hand, and packed up for the water.';
 
-export const CONTACT_EMAIL = 'hello@sunnytides.co';
+export const CONTACT_EMAIL = 'sunnytides.co@gmail.com';
 export const SOCIAL_INSTAGRAM = 'https://instagram.com/sunnytides.co';
 
 export const CURRENCY = 'usd';
