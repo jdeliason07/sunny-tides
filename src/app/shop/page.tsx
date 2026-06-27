@@ -35,8 +35,8 @@ export default function ShopPage() {
             See all
           </Link>
         </div>
-        <div className="mt-8 grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-4">
-          {totes.slice(0, 4).map((p) => (
+        <div className="mt-8 grid grid-cols-2 gap-x-5 gap-y-10">
+          {totes.slice(0, 2).map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}
         </div>
@@ -49,8 +49,8 @@ export default function ShopPage() {
             See all
           </Link>
         </div>
-        <div className="mt-8 grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-4">
-          {jewelry.map((p) => (
+        <div className="mt-8 grid grid-cols-2 gap-x-5 gap-y-10">
+          {jewelry.slice(0, 2).map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}
         </div>
